@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 연습문제2</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>납품자 정보</legend>
+      <br>
+        <ol type="1">
+          <li>납품자명 : <input></li>
+      <br><br>
+          <li>email : <input type="email" placeholder="answer@naver.com"></li>
+      <br><br>
+          <li>홈페이지 : <input type="url" value="http://"></li>
+      <br><br>
+          <li>지역 : <select name="region">
+            <option>서울</option>
+            <option>경기</option>
+            <option>인천</option>
+            <option>강원</option>
+            <option>충청</option>
+            <option>대전</option>
+            <option>경상</option>
+            <option>대구</option>
+            <option>울산</option>
+            <option selected>부산</option>
+            <option>전라</option>
+            <option>광주</option>
+            <option>제주</option>
+              </select></li>
+        </ol>
+      <br>      
+    </fieldset>
+
+    <fieldset>
+      <legend>납품 정보</legend>
+      <br>
+        <ul>
+          <li>상품명 : <input></li>
+          <br><br>
+          <li>납품수량 : <input min="100" placeholder="최소 100"></li>
+          <br><br>
+          <li>납품등급 : <input type="range"></li>
+          <br><br>
+          <li>기타사항 : <textarea rows="6"></textarea></li>
+          <br>
+        </ul>
+    </fieldset>
+
+    <br>
+
+    <button>send message</button>
+  </form>
+
+  <div style="height: 100px; border: none;"></div>
+</body>
+</html>

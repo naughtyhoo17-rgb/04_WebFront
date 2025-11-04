@@ -233,16 +233,92 @@ name 속성
     value 속성값이 없으면 'on'이라는 값으로 제출
     value 속성값이 있으면 value 속성값으로 제출 -->
 
-    <form action="07_이미지관련태그.html" target="_blank" method="get">
-      <input type="checkbox" name="hobby" value="야구"> 야구
-      <input type="checkbox" name="hobby" value="축구"> 축구
-      <input type="checkbox" name="hobby" value="농구"> 농구
+  <form action="07_이미지관련태그.html" target="_blank" method="get">
+    
+    <input type="checkbox" name="hobby" value="야구"> 야구
+    <input type="checkbox" name="hobby" value="축구"> 축구
+    <input type="checkbox" name="hobby" value="농구"> 농구
+    
+    <button type="submit">제출</button>
+  </form>
 
-      <button type="submit">제출</button>
+  <hr><hr><hr>  
 
-    </form>
+  <form>
+    <input>
+    <button type="reset">초기화</button>
+  </form>
 
+  <br>
 
+  <button type="button" id="btn">그냥 버튼</button>
+
+  <script>
+    // JavaScript 영역
+
+    document.getElementById("btn").addEventListener("click", function() {
+      alert("자 이게 클릭이야");
+    });
+  </script>
+
+  <hr>
+
+  <h3>fieldset / legend</h3>
+  <pre>
+fieldset : 테두리를 만들어 그룹을 구분하는 영역
+legend : fieldset 테두리에 이름을 붙이는 것    
+  </pre>
+
+  <form>
+    <fieldset>
+      <legend>로그인 폼</legend>
+
+      아이디 : <input> <br>
+      비밀번호 : <input type="password">
+
+      <button>로그인</button>
+    </fieldset>
+
+  </form>
+
+  <hr><hr><hr>
+
+  <h3>textarea / select & option</h3>
+
+  <h4>textarea 태그
+    : 여러 줄을 입력하기 위한 입력 상자</h4>
+
+  <textarea rows="5" cols="70" placeholder="자기소개를 입력하시오." style="resize: none;"></textarea>
+
+  <hr>
+
+  <h3>select 태그와 option 태그</h3>
+
+  <form>
+    <select name="test">
+      <option value="1">선택1</option>
+      <option>선택2</option>
+      <option selected>선택3</option>
+      <option>선택4</option>
+      <option disabled>선택5</option>
+    </select>
+
+    <button>제출</button>
+  </form>
+
+  <!-- 
+    select 제출 시 option 태그에 value 속성값이 있다면 작성된 그 값이 제출,
+    없다면 option 태그 사이에 작성된 content값이 제출됨
+  
+    selected 속성 : select의 기본값을 설정하는 속성
+    
+    disabled 속성 : option을 비활성화 (클릭 및 입력 불가)
+  -->
+
+  <input type="checkbox" checked>
+  <input type="radio" checked>
+
+  <!-- checked 속성 : checkbox/radio에서 미리 기본으로 체크해두는 속성 -->
 
 
   <div style="height: 500px; border: none;"></div>
