@@ -1,0 +1,106 @@
+/* 일반 구조 선택자 (해석 순서 유의) */
+
+/*
+:first-child
+형제 관계 요소 중 첫 번째 요소
+*/
+#test1 > p:first-child {
+  background-color: cornsilk;
+  color: chartreuse;  
+}
+/* #test1인 요소의 자식 요소 중 형제관계에서 첫 번째 요소가 p 태그인가?
+=> 맞음 thus 스타일 적용ed! */
+
+
+/*
+:last-child
+형제 관계의 요소 중 마지막 요소
+*/
+#test1 > p:last-child {
+  background-color: violet;
+}
+/* #test1 요소의 자식 요소 중 형제관계 중 마지막 요소가 p 태그인가?
+=> 아님. thus 스타일 적용 x! */
+
+
+/*
+:nth-child(수열)
+형제 관계 요소 중 지정된 수열 번째 요소를 모두 선택
+(순서는 1부터 따짐)
+*/
+#test1 > p:nth-child(2) {
+  background-color: yellow;
+}
+
+#test1 > p:nth-child(4) {
+  background-color: goldenrod;
+}
+
+/* 홀수 번째 형제 요소 선택 */
+#test1 > p:nth-child(2n-1) {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* 짝수 번째 형제 요소 선택 */
+#test1 > p:nth-child(2n) {
+  border: 3px solid black;
+}
+
+
+/*
+:nth-last-child(수열)
+형제 관계 요소 중 뒤에서부터 지정된 수열 번째 요소를 모두 선택
+*/
+#test1 > p:nth-last-child(2) {
+  color: hotpink;
+}
+
+
+/* 형태 구조 선택자 (해석 순서 유의) */
+
+/*
+:first-of-type
+같이 선택된 형제들 중에서 첫 번째 요소
+*/
+#test2 > p:first-of-type { /* p태그 중에서 첫 번째 요소 선택 */
+  background-color: skyblue;
+}
+
+
+/*
+last-of-type
+같이 선택된 형제들 중에서 마지막 요소
+*/
+#test2 > p:last-of-type { /* p 태그 중에서 마지막 요소 선택 */
+  background-color: chocolate;
+}
+
+
+/*
+nth-of-type(수열)
+같이 선택된 형제들 중에서 수열 번째 모든 요소
+*/
+#test2 > p:nth-of-type(2n-1) { /* p 태그 중에서 홀수 번째 있는 요소 선택 */
+  font-size: 30px;
+}
+
+
+/*
+nth-last-of-type(수열)
+같이 선택된 형제들 중에서 뒤에서 수열 번째 모든 요소
+*/
+#test2 > p:nth-last-of-type(2n) { /* p 태그 중에서 역순으로 짝수 번째 요소 선택 */
+  background-color: palevioletred;
+}
+
+
+/* 부정 선택자 */
+
+/*
+#test3 요소의 자식 li 요소 중 3의 배수를 제외한 요소만 선택하여
+배경색 aqua 지정
+ */
+#test3 > li:not(:nth-of-type(3n)) {
+  background-color: aqua;
+}
