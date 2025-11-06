@@ -1,0 +1,32 @@
+#test1 > p:only-child{
+  background-color: blueviolet;
+}
+
+#test2 > p:only-of-type{
+  background-color: aqua;
+}
+
+#test3 > p:empty{
+  background-color: red;
+  height: 25px;
+}
+
+#test4-1, #test4-2, .test4-3{
+  background-color: beige;
+  color: blueviolet;
+}
+
+/* #test5-1 후손 중 클래스가 c5인 요소 선택 */
+#test5-1 .c5{
+  background-color: aqua;
+}
+
+/* #test5-2인 자식 중 클래스가 c5인 li요소만 선택 */
+#test5-2 > li.c5{
+  background-color: aquamarine;
+}
+
+.test6.c6{
+  background-color: black;
+  color: white;
+}

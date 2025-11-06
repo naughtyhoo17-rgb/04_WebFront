@@ -1,0 +1,119 @@
+div{
+  border : 1px solid black;
+  box-sizing: border-box;
+  /* content + padding + border 합으로 width/height 지정 */
+}
+
+.item{
+  width: 75px;
+  height: 75px;
+}
+
+.item1{background-color: red;}
+.item2{background-color: orangered;}
+.item3{background-color: orange;}
+.item4{background-color: yellow;}
+.item5{background-color: yellowgreen;}
+.item6{background-color: green;}
+.item7{background-color: lightblue;}
+.item8{background-color: blue;}
+.item9{background-color: violet;}
+
+.flex-container {/* 부모 요소 */
+  height: 800px;
+
+  display: flex;
+  /*
+  display : flex;
+  item(자식 태그)을 감싸는 요소(부모태그)의 형식을 flexbox로 변경
+  즉, 부모 요소에 주는 속성!
+  => 내부 요소인 item들 자동으로 정렬ed, 레이아웃 쉽게 조정 가능해짐
+  
+  자동 정렬 : 가로/세로 정렬 쉽게 조정 가능
+  공간 배분 : 요소 간 간격 자동 조정
+  반응형 레이아웃 : 화면 크기에 따라 유연하게 조정 가능
+  */
+
+  /* flex-direction (부모 전용 속성)
+    : 메인축의 방향과 시작 위치를 지정하는 속성
+  */
+  /* flex-direction: row; 메인축이 행 방향(가로, 기본값) */
+
+  /*flex-direction: row-reverse; 메인축 행 방향 but 순서 반대(뒤집어짐) */
+
+  /* flex-direction: column; 열 방향(세로, 메인축이 세로로 바뀜) */
+
+  /* flex-direction: column-reverse; 열 방향 but 순서 반대(뒤집어짐) */
+
+  /* flex-wrap (부모 전용 속성)
+    : 내부 item들을 포장하는 속성,
+    item들을 강제로 한 줄에 배치할 지, 한 줄을 벗어나 여러 줄에 배치할 지 지정
+  */
+  /* flex-wrap: nowrap; item 한 줄로 배치(기본값) */
+
+  /* flex-wrap: wrap; 여러 줄 배치 */
+
+  /*flex-wrap: wrap-reverse; 여러 줄 배치 + 순서 반대 */
+
+
+  /* justify-content (부모 전용 속성)
+    : 메인축 방향으로 item의 정렬 방법 조정
+  */
+  /* justify-content: flex-start; 메인축 방향으로 앞에서부터 정렬(기본값) */
+  
+  /* justify-content: flex-end; 메인축 방향으로 뒤(끝)에 붙어 정렬 */
+    /* => row-reverse와 다름(뒤집어지지 않음) */
+
+  /* justify-content: center; 메인축 방향으로 가운데 정렬 */
+
+  /* justify-content: space-between; 양 끝을 붙인 상태로 item 간격 일정하게 정렬 */
+
+  /* justify-content: space-around; 양 끝은 약간만, item 간격은 일정하게 정렬 */
+
+  /* justify-content: space-evenly; 양 끝과 item 간격 모두 일정하게 정렬 */
+
+
+  /* align-items (부모 전용 속성)
+    : item들을 교차축 기준으로 정렬하는 방법을 지정하는 속성
+  */
+
+  /* align-items: flex-start; 교차축 앞(위)에서부터 정렬(기본값) */
+
+  /* align-items: center; 교차축 가운데 정렬 */
+
+  /* align-items: flex-end; 교차축 끝에 붙어 정렬 */
+
+}
+
+#con { /* 부모 */
+  width: 450px;
+  height: 450px;
+
+  display: flex; 
+  justify-content: center; /* 메인축 가운데 정렬 */
+  align-items: center; /* 교차축 가운데 정렬 */
+}
+
+#item-center { /* 자식 */
+  width: 80px;
+  height: 80px;
+  background-color: darkred;
+}
+
+
+/* <자식 요소 속성>
+order : 기본값 0
+양수~음수 모두 설정 가능.
+값이 작은 요소가 먼저 배치되고, 큰 요소가 나중에 배치됨
+*/
+.order:nth-child(1) {
+  order: 3;
+}
+
+.order:nth-child(2) {
+  order: -2; /* order 기본값 0 */
+}
+
+.order:nth-child(3) {
+  order: 5;
+}

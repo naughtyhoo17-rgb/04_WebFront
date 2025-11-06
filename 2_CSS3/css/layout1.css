@@ -1,0 +1,110 @@
+.area1{
+  background-color: crimson;
+}
+
+.area2{
+  background-color: coral;
+}
+
+.area3{
+  background-color: goldenrod;
+}
+
+.area4{
+  background-color: darkgreen;
+}
+
+.area5{
+  background-color: darkblue;
+}
+
+.inline{
+  display: inline;
+}
+
+.block{
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+/* 감싸는 영역 요소 */
+#container-1{
+  border: 3px solid black;
+  width: 323px;
+  height: 472px;
+}
+
+#container-1 > div{
+  border: 1px dashed hotpink;
+  height: 50%;
+}
+
+#container-1 > div:first-of-type{
+  height: 30%;
+  background-color: blueviolet;
+}
+
+#container-1 > div:last-child{
+  height: 70%;
+  background-color: chartreuse;
+}
+
+/* block 형식의 요소는 별도의 width가 지정되지 않으면 부모의 100% 지정 */
+
+#container-2{
+  border: 3px solid black;
+  width: 330px;
+  height: 440px;
+}
+
+.div-1{
+  height: 20%;
+  background-color: aqua;
+}
+
+.div-2{
+  height: 30%;
+  background-color: aquamarine;
+}
+
+.div-3{
+  height: 50%;
+  background-color: beige;
+}
+
+#container-3{
+  border: 5px solid darkblue;
+  width: 400px;
+  height: 200px;
+}
+
+.div-4{
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+
+#container-3 > .div-4:first-of-type{
+  background-color: pink;
+}
+
+#container-3 > .div-4:last-of-type{
+  background-color: steelblue;
+}
+
+.div-5{
+  border: 3px solid black;
+  height: 100px;
+}
+
+#test4{
+  background-color: deeppink;
+  
+  /* display: none; */
+  visibility: hidden;
+}
