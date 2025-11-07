@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: 1140px;
+  margin: auto;
+}
+
+header {
+  height: 200px;
+  display: flex;
+}
+
+header > section:nth-of-type(1),
+header > section:nth-of-type(3) {
+  flex-basis: 15%;
+}
+
+header > section:nth-of-type(2) {
+  flex-basis: 70%;
+}
+
+#home-logo {
+  width: 120px;
+}
+
+header > section:nth-of-type(1),
+header > section:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-area {
+  width: 500px;
+}
+
+.search-area fieldset {
+  border: 2px solid #455ba8;
+  border-radius: 5px;
+  padding: 2px;
+
+  display: flex;
+}
+
+#query {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0; /* == none */
+  outline: none; /* outline : input 태그에 포커싱 되었을 때 나타나는 바깥선 */
+  flex-basis: 92%;
+}
+
+#search-btn {
+  flex-basis: 8%;
+  cursor: pointer;
+  font-size: 20px;
+  border: 0;
+  background-color: transparent; /* transparent : 배경색 투명 */
+  color: #455ba8;
+}
+
+nav {
+  height: 50px;
+  border-bottom: 2px solid black;
+}
+
+nav > ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+nav li {
+  flex-basis: 150px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  display: block;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+
+  border-radius: 5px;
+  transition-duration: .2s;
+}
+
+nav a:hover {
+  background-color: #455ba8;
+  color: white;
+}
+
+.content {
+  display: flex;
+}
+
+.content-1 {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.content-2 {
+  flex-basis: 30%;
+}
+
+.content-item {
+  width: 90%;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.content-item > div {
+  width: 100%;
+  height: 200px;
+}
+
+.content-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 이미지가 부모태그(div)에 맞춰지면서 비율을 유지하고,
+  넘치는 부분은 잘리면서 이미지가 자동으로 가운데 정렬 됨! */
+}
+
+.content-item a {
+  text-decoration: none;
+  color: black;  
+}
+
+.content-item p {
+  display: -webkit-box;
+  /* webkit 전용 flexbox로 형태 출력
+    => 줄 수 제한 기능을 위한 준비 (기사의 3 줄만 출력되도록..) */
+  -webkit-line-clamp: 3;
+  /* 텍스트를 최대 3 줄까지만 출력되도록 설정 */
+  -webkit-box-orient: vertical;
+  /* 텍스트 방향 세로로 줄 세움 */
+  overflow: hidden;
+  /* 3 줄 이후의 텍스트는 출력되지 않고 숨김 */
+}

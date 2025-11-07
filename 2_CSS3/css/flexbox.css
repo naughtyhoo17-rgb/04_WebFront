@@ -101,6 +101,96 @@ div{
 }
 
 
+
+
+/* item(자식)에게 주는 flex 속성 */
+
+/*
+ flex-basis : item의 기본 크기를 결정하는 속성
+  => 부모를 기준으로 자식이 얼마만큼 점유하겠는가?
+    width와 비슷, but flex-gro, flex-shrink에 의해 유동적으로 변경 가능
+
+ - flex-basis : auto; (기본값)
+  => 요소 본래의 크기만큼 가짐 (75 x 75)
+ - flex-basis : 0;
+  => 본래 요소의 크기 중 content만 남겨두고 차지하는 영역 없음
+*/ 
+
+.basis-20 {
+  flex-basis: 20%;
+}
+
+.basis-30 {
+  flex-basis: 30%;
+}
+
+.basis-50 {
+  flex-basis: 50%;
+}
+
+/* flex-grow */
+.grow1 {
+  flex-grow: 0; 
+  /* 0이 기본값 => 요소가 추가적으로 가용공간 차지 x
+  thus, 자신의 초기 크기만 유지 
+  설정값은 여백의 비율로 작성하고 적용됨 */
+}
+
+.grow2 {
+  flex-grow: 2;
+}
+
+.grow3 {
+  flex-grow: 1;
+}
+
+
+/*
+flex-shrink : 1; (기본값)
+컨테이너의 크기가 줄어들면 다른 요소들(자식 요소)과 함께 비율적으로 축소될 수 있음을 의미
+*/
+
+.shrink1 {
+  flex-shrink: 0;
+  /* 0 : 줄어들지 않음 => 컨테이너 공간이 부족해도 원래 크기 유지 */
+}
+
+.shrink2 {
+  flex-shrink: 1;
+}
+
+.shrink3 {
+  flex-shrink: 2;
+  /* flex-shrink: n;
+    => n값 비율대로 줄어든다 */
+}
+
+/* flex : flexbox 내에서 아이템의 크기와 비율을 설정하는 속성 */
+
+.flex-test1 {
+  flex: 1;
+  /* flex-grow: 1;
+   => 남은 가용공간을 1 비율로 차지  
+  flex-shrink: 1;
+   => 컨테이너 크기가 부족할 때 줄어들면 1 비율로 축소
+     flex-basis: 0;
+   => 요소의 content만 차지  
+  */   
+}
+
+.flex-test2 {
+  flex: 1 0 auto;
+  /* flex-grow: 1; flew-shrink: 0; flex-basis: auto;
+    => 남는 공간은 1 비율로 차지, 축소되지 않겠다, 기본 크기는 auto(본인 원래 크기) */
+}
+
+.flex-test3 {
+  flex: 1 50%;
+  /* flex-grow: 1; flex-shrink: 1; flex-basis: 50%;
+    => 남는 공간 1 비율로 차지, 줄어들면 1 비율로 축소, 기본 점유율 50% */
+}
+
+/* -------------------------------------------------------------- */
 /* <자식 요소 속성>
 order : 기본값 0
 양수~음수 모두 설정 가능.
@@ -116,4 +206,271 @@ order : 기본값 0
 
 .order:nth-child(3) {
   order: 5;
+}
+
+/* 문제 1 */
+
+.container-1 {
+  width: 800px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header-1, .footer-1{
+  flex-basis: 20%;
+  background-color: gray;
+}
+
+.body-1 {
+  flex-basis: 60%; /* 자식 전용 */
+
+  display: flex; /* 부모 전용 */
+  /* body-1은 container-1의 자식요소 이면서 body-item 요소들의 부모 */
+}
+
+.body-item:nth-child(1) {
+  flex-basis: 30%;
+  background-color: skyblue;
+}
+
+.body-item:nth-child(2) {
+  flex-basis: 50%;
+  background-color: tomato;
+}
+
+.body-item:nth-child(3) {
+  flex-basis: 20%;
+  background-color: antiquewhite;
+}
+
+
+/* 문제 2 */
+
+.container-2 {
+  width: 800px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header-2 {
+  flex-basis: 20%;
+  background-color: red;
+}
+
+.body-2 {
+  flex-basis: 70%;
+
+  display: flex;
+}
+
+.body-item2:nth-child(1) {
+  flex-basis: 30%;
+  background-color: yellow;
+}
+
+.body-item2:nth-child(2) {
+  flex-basis: 70%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.item-item2:nth-child(1) {
+  flex-basis: 80%;
+  background-color: chartreuse;
+}
+
+.item-item2:nth-child(2) {
+  flex-basis: 20%;
+  background-color: blue;
+}
+
+
+/* 문제 3 */
+
+.container-3 {
+  width: 800px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header-3 {
+  flex-basis: 30%;
+  background-color: yellow;
+}
+
+.body-3 {
+  flex-basis: 70%;
+  display: flex;
+}
+
+.body-item3:nth-child(1) {
+  flex-basis: 33%;
+  background-color: skyblue;
+}
+
+.body-item3:nth-child(2) {
+  flex-basis: 67%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-item3:nth-child(1) {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.item-item3:nth-child(2) {
+  flex-basis: 50%;
+  background-color: deeppink;
+}
+
+.sonofitem3:nth-child(1) {
+  flex-basis: 70%;
+  background-color: aquamarine;
+}
+
+.sonofitem3:nth-child(2) {
+  flex-basis: 30%;
+  background-color: orangered;
+}
+
+
+/* 문제 4 */
+
+.container-4 {
+  width: 800px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header-4, .footer-4 {
+  flex-basis: 20%;
+  background-color: green;
+}
+
+.body-4 {
+  flex-basis: 60%;
+  display: flex;
+}
+
+.body-item4:nth-child(1) {
+  flex-basis: 30%;
+  background-color: yellow;
+}
+
+.body-item4:nth-child(2) {
+  flex-basis: 70%;
+  background-color: orange;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.sonofitem4 {
+  height: 155px;
+  width: 155px;
+  background-color: red;
+}
+
+
+/* 문제 5 */
+
+.container-5 {
+  width: 800px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header-5 {
+  flex-basis: 30%;
+  background-color: yellow;
+
+  display: flex;
+}
+
+.header-item5:nth-child(1) {
+  flex-basis: 20%;
+}
+
+.header-item5:not(:nth-child(1)) {
+  flex-basis: 40%;
+}
+
+.body-5 {
+  flex-basis: 70%;
+  display: flex;
+}
+
+.body-item5:nth-child(1) {
+  flex-basis: 30%;
+  background-color: skyblue;
+  flex-direction: column;
+  display: flex;
+}
+
+.body-item5:nth-child(1)> .sonofitem5 {
+  flex-grow: 1;
+}
+
+.body-item5:nth-child(2) {
+  flex-basis: 15%;
+  background-color: pink;
+}
+
+.body-item5:nth-child(3) {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sonofitem5-3:nth-child(1) {
+  flex-basis: 50%;
+  background-color: orange;
+}
+
+.sonofitem5-3:nth-child(2) {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.grandson5:nth-child(1) {
+  flex-grow: 1;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+}
+
+.sonsonson5 {
+  flex-grow: 1;
+}
+
+.grandson5:nth-child(2) {
+  flex-grow: 1;
+  background-color: red;
+}
+
+.body-item5:nth-child(4) {
+  flex-basis: 15%;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+
+.sonofitem5-5:nth-child(1), .sonofitem5-5:nth-child(3) {
+  flex-grow: 1;
+}
+
+.sonofitem5-5:nth-child(2) {
+  flex-grow: 3;
 }
