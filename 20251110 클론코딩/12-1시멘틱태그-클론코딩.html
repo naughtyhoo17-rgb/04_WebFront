@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>당근마켓 클론코딩</title>
+  <link rel="stylesheet" href="/2_CSS3/css/carrotmarket.css">
+  <script src="https://kit.fontawesome.com/5b2a3ed0ae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <nav>
+        <section>
+          <a href="#">
+            <img src="/images/당근 로고.svg" id="home-logo">
+          </a>
+        </section>
+        <section>
+          <ul>
+            <li><a href="#">중고거래</a></li>
+            <li><a href="#">
+              <select name="nav-select">
+                <option value="">부동산</option>
+              </select>
+            </a></li>
+            <li><a href="#">
+              <select name="nav-select">
+                <option value="">중고차</option>
+              </select>
+            </a></li>
+            <li><a href="#">
+              <select name="nav-select">
+                <option value="">알바</option>
+              </select>
+            </a></li>
+            <li><a href="#">동네업체</a></li>
+            <li><a href="#">동네생활</a></li>
+            <li><a href="#">모임</a></li>
+          </ul>
+        </section>
+        <section>
+          <button id="app-down">앱 다운로드</button>
+        </section>
+      </nav>
+    </header>
+    <div class="sub-header">
+      <section class="location">
+        <fieldset>
+        <a href="#">
+          <button id="location-button" class="fa-solid fa-location-dot"></button>
+          <select id="location-select">
+            <option>초월읍</option>
+          </select>
+        </a></fieldset>
+      </section>
+
+      <section class="search">
+       <form action="#" name="search-form">
+        <fieldset>
+          <section id="firstfloor">
+            <select id="select-menu">
+              <option value="">중고거래</option>
+            </select>
+            <input type="search" id="query" name="query" placeholder="검색어를 입력해주세요." autocomplete="off">
+            <button id="search-button" class="fa-solid fa-arrow-right"></button>
+          </section>
+          <section>
+            <p>인기 검색어</p>
+            <ul>
+              <li><a href="#">에어컨</a></li>
+              <li><a href="#">자전거</a></li>
+              <li><a href="#">아이폰</a></li>
+              <li><a href="#">컴퓨터</a></li>            
+              <li><a href="#">냉장고</a></li>            
+              <li><a href="#">굿즈</a></li>            
+              <li><a href="#">플스</a></li>            
+              <li><a href="#">닌텐도</a></li>
+            </ul>
+          </section>
+        </fieldset>
+       </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
