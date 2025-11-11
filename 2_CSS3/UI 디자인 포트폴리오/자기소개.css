@@ -208,6 +208,7 @@ a{
   header{
     margin: 50px 0;
     background-color: beige;
+
   }
   header > .menu-list > ul{
     display: flex;
@@ -242,6 +243,7 @@ a{
   #my_info{
     flex-basis: 30%;
     background-color: blanchedalmond;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -249,13 +251,26 @@ a{
   }
   #my_info > ul > li {
     list-style: none;
-  }
-  #content_detail{
-    flex-basis: 70%;
+    height: 30px;
   }
   #my_pic{
     width: 200px;
-    
+    border-radius: 5px;
+  }
+  #content_detail{
+    flex-basis: 70%;
+    padding: 10px;
+   }
+
+  #about_me > img {
+    width: 400px;
+    height: 450px;
+  }
+
+  #project > a > i {
+    width: 75px;
+    height: 75px;
+    color: rgb(83, 209, 241);
   }
   #contact{
     background-color: seashell;
