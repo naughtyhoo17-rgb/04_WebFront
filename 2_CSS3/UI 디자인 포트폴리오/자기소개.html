@@ -8,42 +8,84 @@
   <script src="https://kit.fontawesome.com/5b2a3ed0ae.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <section></section>
-    <section class="menu-list">
-      <ul>
-        <li><a href="#aboutMe">About me</a></li>
-        <li><a href="#eduSkill">Education / Skills</a></li>
-        <li><a href="#project">Projects</a></li>
-      </ul>
-    </section>
+ 
+  <main id="container">
+     <header>
+    <nav class="menu-list">
+        <ul>
+          <li><a href="#about_me">About me</a></li>
+          <li><a href="#eduSkill">Education / Skills</a></li>
+          <li><a href="#project">Projects</a></li>
+        </ul>
+      </nav>
   </header>
-  <main>
-    <section id="basic">
-      <img src="/2_CSS3/UI 디자인 포트폴리오/images/20240226_211527.jpg" alt="카톡 프로필 사진">
-      <i class="fa-solid fa-phone">010-8942-4290</i>
+    <section id="content">
+      <section id="my_info">
+        <img src="./images/image.png" id="my_pic" alt="">
+        <ul>
+          <li>이름</li>
+          <li>✔ 010-1234-1234</li>
+          <li>이메일</li>
+        </ul>
+      </section>
+      <section id="content_detail">
+        <section id="about_me">
+          <h1>About me</h1>
+          
+        </section>
+        <section id="eduSkill">
+          <h1>Education / Skills</h1>
+          <h3>교육 이력</h3>
+          <ul>
+            <li>KH 정보교육원 수료 예정</li>
+          </ul>
+          <h3>보유 기술</h3>
+          <table border="1">
+            <tr>
+              <th>분야</th>
+              <th>내용</th>
+            </tr>
+            <tr>
+              <td>FrontEnd</td>
+              <td>HTML , CSS</td>
+            </tr>
+            <tr>
+              <td>BackEnd</td>
+              <td>Java</td>
+            </tr>
+            <tr>
+              <td>DataBase</td>
+              <td>Oracle</td>
+            </tr>
+            <tr>
+              <td>DataAccess</td>
+              <td>JDBC</td>
+            </tr>
+          </table>
+        </section>
+        <section id="project">
+          <h1>project</h1>
+        </section>
+      </section>
     </section>
-    <section id="content"></section>
-  </main>
-  <footer>
-    <nav>
-      <hr>
-      <form action="#" name="contact-form" method="post">
-        <fieldset id="contact-form">
-          <legend>Contact me</legend>
-          <br>
-          <input type="text" name="inputName" placeholder="이름">
-          <br>
-          <input type="email" name="inputemail" placeholder="E-mail">
-          <br>
-          <input type="tel" name="inputtel" placeholder="연락처(- 포함)">
-          <br>
-          <textarea name="message" rows="5" cols="70" style="resize: none;" placeholder="자유롭게 간략한 메세지를 적어주세요."></textarea>
-          <br>
-          <button>Contact</button>         
-        </fieldset>
-      </form>
-    </nav>
+    <footer id="contact">
+          <form action="#" name="contact-form" method="post" >
+            <fieldset id="contact-form">
+              <legend>Contact me</legend>
+              <br>
+              <input type="text" name="inputName" placeholder="이름">
+              <br>
+              <input type="email" name="inputEmail" placeholder="E-mail">
+              <br>
+              <input type="tel" name="inputTel" placeholder="연락처(- 포함)">
+              <br>
+              <textarea name="message" id="textarea" style="resize: none;" placeholder="자유롭게 간략한 메세지를 적어주세요."></textarea>
+              <br>
+              <button>Contact</button>         
+            </fieldset>
+          </form>
   </footer>
+  </main>
+  
 </body>
 </html>
