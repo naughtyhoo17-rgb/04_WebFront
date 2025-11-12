@@ -66,6 +66,13 @@
     padding: 10px;
    }
 
+   #about_me > h1,
+   #eduSkill > h1,
+   #project > h1 {
+    color: indigo;
+    text-decoration: underline;
+   }
+
   #about_me > img {
     width: 400px;
     height: 450px;
