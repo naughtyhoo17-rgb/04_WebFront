@@ -115,15 +115,15 @@ function readValue() {
   } 
 
   // 공백을 제외한 어떠한 값을 입력한 경우
-   bg.innerHTML += (`<p><span>${input.value}</span></p>`);
+  bg.innerHTML += (`<p><span>${input.value}</span></p>`);
 
-   // bg.scrollTop: 현재 스크롤 위치
-   // 스크롤이 현재 얼마만큼 내려와있는지 나타냄
-   console.log(bg.scrollTop);
+  // bg.scrollTop: 현재 스크롤 위치
+  // 스크롤이 현재 얼마만큼 내려와있는지 나타냄
+  console.log(bg.scrollTop);
 
-   // bg.scrollHeight: bg의 스크롤 전체 높이
-   // 스크롤바를 올리고 내리고 할 수 있는 전체 높이 
-   console.log(bg.scrollHeight);
+  // bg.scrollHeight: bg의 스크롤 전체 높이
+  // 스크롤바를 올리고 내리고 할 수 있는 전체 높이 
+  console.log(bg.scrollHeight);
   
   bg.scrollTop = bg.scrollHeight;
 
