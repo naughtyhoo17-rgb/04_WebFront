@@ -118,7 +118,7 @@ test2.addEventListener("click", function () {
 // ---------------------------------------------------
 
 const box3 = document.querySelector("#box3");
-const input3 = document.getElementById("input3");
+const input3 = document.querySelector("#input3");
 
 input3.addEventListener("keyup", function (e) {
 
