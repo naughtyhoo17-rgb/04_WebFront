@@ -46,7 +46,7 @@ document.getElementById("test1-2").onclick = function () {
 
 // <고전 이벤트 모델 단점>
 // test1-3 요소 얻어와 test1c 변수에 저장
-const test1c = document.querySelector("test1-3");
+const test1c = document.querySelector("#test1-3");
 
 // test1c 요소가 클릭되었을 때 배경색 빨간색으로 변경
 test1c.onclick = function () {

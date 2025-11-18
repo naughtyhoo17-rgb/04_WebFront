@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#result {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  overflow: auto;
+}
