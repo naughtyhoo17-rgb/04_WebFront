@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table th,
+.table td {
+  height: 50px;
+}
+
+#width,
+#height,
+#fontSize {
+  width: 100px;
+}
+
+#content {
+  width: 100%;
+}
+
+#btn {
+  width: 75px;
+}
+
+#result {
+  border: 2px solid black;
+  display: flex;
+}
