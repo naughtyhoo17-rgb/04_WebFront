@@ -5,8 +5,6 @@
 }
 
 #result {
-  width: 500px;
-  height: 300px;
   border: 1px solid black;
   display: flex;
   overflow: auto;

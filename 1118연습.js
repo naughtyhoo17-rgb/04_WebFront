@@ -12,7 +12,7 @@ btn.addEventListener("click", () => {
 
   const div = document.createElement("div");
   div.style.width = inputWidth.value + "px";
-  div.style.Height = inputHeight.value + "px";
+  div.style.height = inputHeight.value + "px";
   div.innerText = content.value;
   div.style.color = inputColor.value;
 
