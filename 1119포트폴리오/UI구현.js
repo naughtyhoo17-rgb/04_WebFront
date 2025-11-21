@@ -17,12 +17,12 @@ btn.addEventListener("click", () => {
   const p = document.createElement("p");
   
   p.innerText = content.value;
-  p.style.width = width.value + "px";
-  p.style.height = height.value + "px";
+  result.style.width = width.value + "px";
+  result.style.height = height.value + "px";
   p.style.fontSize = size.value + "px";
   p.style.fontWeight = weight.value;
   p.style.color = color.value;
-  p.style.backgroundColor = bgColor.value;
+  result.style.backgroundColor = bgColor.value;
   
   result.style.justifyContent = justiCon.value;
   result.style.alignItems = alignCon.value;
